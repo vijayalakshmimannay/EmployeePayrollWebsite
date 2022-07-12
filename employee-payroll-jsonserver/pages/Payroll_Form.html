@@ -12,7 +12,7 @@
     <!--UC1 Create Employee Payroll HomePage UI-->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../assets/images/logo.png" alt ="logo">
+            <img src="../assets/images/profile.jpg" alt ="logo">
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
@@ -33,20 +33,20 @@
     <label class="label text" for="Profile1">Profile Image</label>
     <div class="profile-radio-content">
         <label>
-        <input type="radio" id="profile1" name="profile" value="../assets/images/employee1.png" required>
-              <img class="profile" id="image1" src="../assets/images/employee1.png" alt="Employee1">
+        <input type="radio" id="profile1" name="profile" value="../assets/images/employee4.jpg" required>
+              <img class="profile" id="image1" src="../assets/images/employee4.jpg" alt="Employee1">
         </label>
         <label>
-            <input type="radio" id="profile2" name="profile" value="../assets/images/employee2.png" required>
-                  <img class="profile" id="image2" src="../assets/images/employee2.png" alt="Employee2">
+            <input type="radio" id="profile2" name="profile" value="../assets/images/employee3.jpg" required>
+                  <img class="profile" id="image2" src="../assets/images/employee3.jpg" alt="Employee2">
         </label>
         <label>
-                <input type="radio" id="profile3" name="profile" value="../assets/images/employee4.png" required>
-                      <img class="profile" id="image3" src="../assets/images/employee4.png" alt="Employee3">
+                <input type="radio" id="profile3" name="profile" value="../assets/images/employee2.jpg" required>
+                      <img class="profile" id="image3" src="../assets/images/employee2.jpg" alt="Employee3">
         </label>
         <label>
-            <input type="radio" id="profile4" name="profile"value="../assets/images/employee3.png" required>
-                  <img class="profile" id="image4" src="../assets/images/employee3.png" alt="Employee3">
+            <input type="radio" id="profile4" name="profile"value="../assets/images/employee1.jpg" required>
+                  <img class="profile" id="image4" src="../assets/images/employee1.jpg" alt="Employee4">
     </label>
     </div>
     </div> 
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="row-content">
-        <label class="label text" for="salary">Choose your Salary: </label>
+        <label class="label text" for="salary">Salary: </label>
         <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
         <output class="salary-output text" for="salary">400000</output>
     </div>
@@ -141,7 +141,19 @@
                 <option value="2016">2016</option>
             </select>
         </div>
-
+    </div>
+       
+    <!-- UC6 Add notes and buttons-->
+    <div class="row-content">
+            <label class="label text" for="notes">Notes</label>
+            <textarea class="input" id="notes" name="notes" placeholder="Say Something..." style="height:100px;"></textarea>
+    </div>
+    <div class="buttonParent">
+            <a href="./Payroll_Form.html" class="resetButton button cancelButton">Cancel</a>
+            <div class="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
     </div>
     </form >
     </div>
