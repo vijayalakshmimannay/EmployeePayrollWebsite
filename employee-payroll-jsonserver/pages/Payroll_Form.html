@@ -7,6 +7,7 @@
     <title>Employee Payroll Form</title>
     <link rel="stylesheet" href="../css/Payroll_Form.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
+    <script defer src="../js/EmployeePayroll_js"></script>
 </head>
 <body>
     <!--UC1 Create Employee Payroll HomePage UI-->
@@ -25,7 +26,8 @@
             <div class="form-head"> Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Enter Your Name" required>                
+                <input class="input" type="text" id="name" name="name" placeholder="Enter Your Name" required>     
+                <error class="error-output" for="name"></error>           
             </div>
     <!---UC3 Specify Profile Pic to the Employee Payroll App -->
 
@@ -157,12 +159,6 @@
     </div>
     </form >
     </div>
-    <script>
-    const salary = document.querySelector('#salary');
-    const output = document.querySelector('.salary-output');
-    output.textContent = salary.value;
-    salary.addEventListener('input', function () {
-    output.textContent = salary.value; });
-   </script>
+    
 </body>
 </html>
