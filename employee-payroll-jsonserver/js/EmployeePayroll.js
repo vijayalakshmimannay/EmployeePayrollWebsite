@@ -71,7 +71,7 @@ const getSelectedValue = (propertyValue)=> {
     })
     return setItem;
 }
-
+// UC9 Save the Employee Payroll object to local storage
 function createAndUpdateStorage(employeePayroll) {
     let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
     if(employeePayrollList != undefined){
