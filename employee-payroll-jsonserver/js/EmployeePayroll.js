@@ -82,3 +82,21 @@ function createAndUpdateStorage(employeePayroll) {
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
     alert(JSON.stringify(employeePayrollList));
 }
+//UC10 Reset the EmployeePayroll Form
+const resetForm = () => {
+    setValue('#name','');
+    unsetSelectedValues('[name=Profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','40000');
+    setValue('#notes','');
+    setValue('#day','day');
+    setValue('#month','January');
+    setValue('#year','2022');
+}
+const unsetSelectedValues = (propertyValue) =>{
+    let allItems = document.querySelectorAll(propertyValue);
+    allItems.forEach(item =>{
+        item.checked = false;
+    });
+}
