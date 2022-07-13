@@ -18,10 +18,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 })
 // UC8 Create Employee Payroll Object On Save, validate Name and Date
 const save = () => {
+    try {
     let employeePayroll = createEmployeePayroll();
-    alert(JSON.stringify(employeePayroll));
+    createAndUpdateStorage(employeePayroll);
+    }catch (e) {
+        return;
+    }
+    //alert(JSON.stringify(employeePayroll));
 }
-
 const createEmployeePayroll = () => {
     let employeePayroll = new EmployeePayroll();
     try {
@@ -66,4 +70,15 @@ const getSelectedValue = (propertyValue)=> {
         }
     })
     return setItem;
+}
+
+function createAndUpdateStorage(employeePayroll) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if(employeePayrollList != undefined){
+        employeePayrollList.push(employeePayroll);
+    } else{
+        employeePayrollList = [employeePayroll];
+    }
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
+    alert(JSON.stringify(employeePayrollList));
 }
