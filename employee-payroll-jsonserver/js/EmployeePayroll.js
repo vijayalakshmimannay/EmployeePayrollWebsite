@@ -1,10 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-
-    validateName();
-    salaryRange();
-})
-
-function validateName() {
     const name = document.querySelector('#name');
     const nameError = document.querySelector('.text-error');
     name.addEventListener('input', function () {
@@ -16,16 +10,13 @@ function validateName() {
             nameError.textContent = e;
         }
     });
-}
-
-function salaryRange() {
     const salary = document.querySelector('#salary');
     const output = document.querySelector('.salary-output');
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
     });
-}
-
+})
+// UC8 Create Employee Payroll Object On Save, validate Name and Date
 const save = () => {
     let employeePayroll = createEmployeePayroll();
     alert(JSON.stringify(employeePayroll));
