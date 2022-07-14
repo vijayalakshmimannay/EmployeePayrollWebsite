@@ -29,8 +29,39 @@
             </div>
             <a href="../pages/Payroll_Form.html" class="add-button">
             <img src="../assets/images/add-24px.svg" alt="">Add User</a>     
+        </div>      
+    
+        <!---  UC3 Display Employee details in tabular format ---->
+        <div class="table-main">
+            <table id="display" class="table">
+               <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Department</th>
+                  <th>Salary</th>
+                  <th>Start Date</th>
+                  <th>Actions</th>
+               </tr>
+               <tr>
+               <td>
+                  <img class="profile" alt="profileImage" src="../assets/images/employee1.jpg">
+                </td>
+                <td>Lakshmi Talluri</td>
+                 <td>female</td>
+                <td>
+                   <div class="dept-label">HR</div>
+                   <div class="dept-label">Engineer</div>
+                </td>
+                <td>300000</td>
+                <td> 13 July 2022</td>
+                <td>
+                   <img id="1" alt="edit" onclick="update(this)" src="../assets/images/update-black-18dp.svg">
+                   <img id="1" onclick="remove(this)" alt="delete" src="../assets/images/delete-black-18dp.svg">
+                </td>
+                </tr>
+            </table>
         </div>
-        
     </div>
 </body>
 
