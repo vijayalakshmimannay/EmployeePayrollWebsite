@@ -18,19 +18,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 })
 // UC8 Create Employee Payroll Object On Save, validate Name and Date
-const save = () => {
-    try {
-    let employeePayroll = createEmployeePayroll();
-    createAndUpdateStorage(employeePayroll);
-    }catch (e) {
-        return;
+const save = () => {    
+    try{
+        let employeePayroll = createEmployeePayroll();
+        // UC9: Saving Employee Payroll to Local Storage
+        createAndUpdateStorage(employeePayroll);
     }
-    //alert(JSON.stringify(employeePayroll));
+    catch (e) {
+        return;
+    }    
 }
 const createEmployeePayroll = () => {
     let employeePayroll = new EmployeePayroll();
     try {
-        employeePayroll.name = getInputValueId("#name");
+        employeePayroll.name = getInputValueId('#name');
         setTextValue('.text-error', "");
     } catch (e) {
         setTextValue('.text-error', e);
@@ -50,7 +51,6 @@ const createEmployeePayroll = () => {
     employeePayroll.salary = getInputValueId('#salary');
     employeePayroll.notes = getInputValueId('#notes');
     employeePayroll.id = new Date().getTime()+1;
-    alert(JSON.stringify(employeePayrollData));
     return employeePayroll;
 }
 
