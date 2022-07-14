@@ -33,10 +33,9 @@ const createInnerHtml = () => {
 const createEmployeePayrollJSON = () => {
     let employeePayrollListLocal = [
         {
-            _name: 'Lakshmi Talluri',
+            _name: 'Lakshmi ',
             _gender: 'Female',
             _department: [
-                'HR',
                 'Engineer'
             ],
             _salary: '400000',
@@ -49,26 +48,26 @@ const createEmployeePayrollJSON = () => {
             _name: 'Harsha',
             _gender: 'Male',
             _department: [
-                'Finance'
+                'Finance',
+                'Engineer'
             ],
             _salary: '600000',
             _startDate: '12 June 2016',
             _note: '',
             _id: new Date().getTime() + 1,
-            _profilePic: '../assets/images/employee2.jpg'
+            _profilePic: '../assets/images/employee4.jpg'
         },
         {
             _name: 'Aarna',
             _gender: 'Female',
             _department: [
-                'HR',
-                'Engineer'
+                'HR'    
             ],
             _salary: '300000',
             _startDate: '20 Nov 2021',
             _note: '',
             _id: new Date().getTime() + 1,
-            _profilePic: '../assets/images/employee3.jpg'
+            _profilePic: '../assets/images/employee1.jpg'
         }
     ];
     return employeePayrollListLocal;
