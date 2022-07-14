@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+    // UC7 Name Validation
     const name = document.querySelector('#name');
     const nameError = document.querySelector('.text-error');
     name.addEventListener('input', function () {
@@ -49,6 +50,7 @@ const createEmployeePayroll = () => {
     employeePayroll.salary = getInputValueId('#salary');
     employeePayroll.notes = getInputValueId('#notes');
     employeePayroll.id = new Date().getTime()+1;
+    alert(JSON.stringify(employeePayrollData));
     return employeePayroll;
 }
 
