@@ -1,3 +1,5 @@
+let isUpdate = false;
+let employeePayrollObj = {};
 window.addEventListener('DOMContentLoaded', (event) => {
     // UC7 Name Validation
     const name = document.querySelector('#name');
@@ -16,6 +18,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
     });
+    checkForUpdate();
 })
 // UC8 Create Employee Payroll Object On Save, validate Name and Date
 const save = () => {    
@@ -100,5 +103,49 @@ const unsetSelectedValues = (propertyValue) =>{
     let allItems = document.querySelectorAll(propertyValue);
     allItems.forEach(item =>{
         item.checked = false;
+    });
+}
+const setValue = (id, value) => {
+    let element = document.querySelector(id);
+    element.value = value;
+}
+
+//Update row
+const checkForUpdate = () => {
+    const employeePayrollLJson = localStorage.getItem('editEmp');
+    isUpdate = employeePayrollLJson ? true : false;
+    if (!isUpdate)
+        return;
+        employeePayrollObj = JSON.parse(employeePayrollLJson);
+    setForm();
+}
+
+const setForm = () => {
+    setValue('#name', employeePayrollObj._name);
+    setSelectValue('[name=profile]', employeePayrollObj._profilePic);
+    setSelectValue('[name=gender]', employeePayrollObj._gender);
+    setSelectValue('[name=department]', employeePayrollObj._department);
+
+    setValue('#salary', employeePayrollObj._salary);
+    setTextValue('.salary-output', employeePayrollObj._salary);
+
+    let date = stringifyDate(employeePayrollObj._startDate).split(" ");
+    //console.log(date);
+    setValue('#day', date[0]);
+    setValue('#month', date[1]);
+    setValue('#year', date[2]);
+
+    setValue('#notes', employeePayrollObj._notes);
+}
+const setSelectValue = (propertyValue, value) => {
+    let allItem = document.querySelectorAll(propertyValue);
+    allItem.forEach(item => {
+        if (Array.isArray(value)) {
+            if(value.includes(item.value)){
+                item.checked = true;
+            }
+        } else if (item.value == value) {
+            item.checked = true;
+        }
     });
 }
