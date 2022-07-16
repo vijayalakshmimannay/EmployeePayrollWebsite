@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
      employeePayrollList = getEmployeePayrollDataFromStorage();
      document.querySelector(".emp-count").textContent = employeePayrollList.length;
      createInnerHtml();
+     localStorage.removeItem('editEmp');
 });
 const getEmployeePayrollDataFromStorage = () => {
     return localStorage.getItem('EmployeePayrollList') ?
@@ -12,7 +13,7 @@ const getEmployeePayrollDataFromStorage = () => {
 }
 // UC14 Template Literals (ES6) feature
 const createInnerHtml = () => {
-    const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
+    const headerHtml = "<th>Profile</th><th>Name</th><th>Gender</th><th>Department</th>"+
                         "<th>Salary</th><th>Start Date</th><th>Actions</th>";
     let innerHtml = `${headerHtml}`;
    // let employeePayrollList = createEmployeePayrollJSON();
@@ -46,7 +47,7 @@ const createEmployeePayrollJSON = () => {
             ],
             _salary: '400000',
             _startDate: '13 July 2022',
-            _note: '',
+            _notes: '',
             _id: new Date().getTime(),
             _profilePic: '../assets/images/employee3.jpg'
         },
@@ -59,7 +60,7 @@ const createEmployeePayrollJSON = () => {
             ],
             _salary: '600000',
             _startDate: '12 June 2016',
-            _note: '',
+            _notes: '',
             _id: new Date().getTime() + 1,
             _profilePic: '../assets/images/employee4.jpg'
         },
@@ -71,7 +72,7 @@ const createEmployeePayrollJSON = () => {
             ],
             _salary: '300000',
             _startDate: '20 Nov 2021',
-            _note: '',
+            _notes: '',
             _id: new Date().getTime() + 1,
             _profilePic: '../assets/images/employee1.jpg'
         }

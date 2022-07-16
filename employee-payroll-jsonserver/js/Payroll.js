@@ -65,7 +65,13 @@ class EmployeePayroll {
             this._startDate = startDate;
         }
         else{
-           throw "Invalid Date";
+            alert("Invalid (Future Date)");
+            throw "Invalid Date"
         }        
+    }
+    toString() {
+        return "id =" +this.id + ", Name' " + this.name + ", Gender=' " +this.gender +
+               ", ProfilePic= ' " +this.profilePic +", Department=" +this.department +
+               ", Salary=" +this.salary + ", StartDate=" +this.startDate + ", Notes=" +this.notes;
     }
 }

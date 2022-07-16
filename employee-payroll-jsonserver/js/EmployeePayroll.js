@@ -38,6 +38,7 @@ const createEmployeePayroll = () => {
         setTextValue('.text-error', "");
     } catch (e) {
         setTextValue('.text-error', e);
+        throw e;
     }
 
     try {
@@ -54,6 +55,7 @@ const createEmployeePayroll = () => {
     employeePayroll.salary = getInputValueId('#salary');
     employeePayroll.notes = getInputValueId('#notes');
     employeePayroll.id = new Date().getTime()+1;
+    alert(employeePayroll.toString());
     return employeePayroll;
 }
 
@@ -85,7 +87,7 @@ function createAndUpdateStorage(employeePayroll) {
         employeePayrollList = [employeePayroll];
     }
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
-    alert(JSON.stringify(employeePayrollList));
+    alert(employeePayrollList.toString());
 }
 //UC10 Reset the EmployeePayroll Form
 const resetForm = () => {
@@ -99,6 +101,11 @@ const resetForm = () => {
     setValue('#month','January');
     setValue('#year','2022');
 }
+const setSelectedIndex = (id, index) => {
+    const element = document.querySelector(id);
+    element.selectedIndex = index;
+}
+
 const unsetSelectedValues = (propertyValue) =>{
     let allItems = document.querySelectorAll(propertyValue);
     allItems.forEach(item =>{
@@ -106,11 +113,11 @@ const unsetSelectedValues = (propertyValue) =>{
     });
 }
 const setValue = (id, value) => {
-    let element = document.querySelector(id);
+    const element = document.querySelector(id);
     element.value = value;
 }
 
-//Update row
+//UC18 Update row
 const checkForUpdate = () => {
     const employeePayrollLJson = localStorage.getItem('editEmp');
     isUpdate = employeePayrollLJson ? true : false;
@@ -134,7 +141,6 @@ const setForm = () => {
     setValue('#day', date[0]);
     setValue('#month', date[1]);
     setValue('#year', date[2]);
-
     setValue('#notes', employeePayrollObj._notes);
 }
 const setSelectValue = (propertyValue, value) => {
