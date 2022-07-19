@@ -1,0 +1,126 @@
+{
+  "EmployeePayrollDB": [
+    {
+      "_name": "Vijaya",
+      "_profilePic": "../assets/images/employee3.png",
+      "_gender": "female",
+      "_department": [
+        "Developer"
+      ],
+      "_salary": "43000",
+      "_notes": "Wow...Nice...",
+      "_startDate": "30 Jun 2022",
+      "id": 2
+    },
+    {
+      "_name": "Aarna",
+      "_profilePic": "../assets/images/employee1.png",
+      "_gender": "female",
+      "_department": [
+        "Developer",
+        "Engineer"
+      ],
+      "_salary": "450000",
+      "_notes": "Wow...",
+      "_startDate": "8 Jul 2022",
+      "id": 4
+    },
+    {
+      "_name": "Lokesh",
+      "_profilePic": "../assets/images/employee2.png",
+      "_gender": "male",
+      "_department": [
+        "Designer",
+        "Developer"
+      ],
+      "_salary": "420000",
+      "_notes": "Fantastic...",
+      "_startDate": "10 Jul 2022",
+      "id": 7
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 9
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 10
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 11
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 12
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 13
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 14
+    },
+    {
+      "_name": "Vijaya",
+      "_gender": "Female",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "40000",
+      "_startDate": "30 Jun 2022",
+      "_notes": "Good...",
+      "_profilePic": "../assets/images/employee1.jpg",
+      "id": 15
+    }
+  ]
+}
