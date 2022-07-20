@@ -37,7 +37,7 @@
             });
 
         const deleteElement = document.querySelector("#delete_services");
-        const deleteURL = "http://localhost:3000/EmployeePayrollDB/20";
+        const deleteURL = "http://localhost:3000/EmployeePayrollDB/12";
         makeServiceCall("DELETE", deleteURL, false)
             .then(responseText => {
                 deleteElement.textContent = "Delete User Data :" + responseText;
@@ -45,9 +45,6 @@
             .catch(error => { 
                 deleteElement.textContent = "Delete Error Status" + JSON.stringify(error); 
             });
-
-        const postElement = document.querySelector("#post_services");
-        const postURL = "http://localhost:3000/EmployeePayrollDB/";
         const EmployeeData = 
         {
             "_name":"Vijaya",
@@ -60,6 +57,8 @@
             "_notes":"Good...",
             "_profilePic":"../assets/images/employee1.jpg"
         };
+        const postElement = document.querySelector("#post_services");
+        const postURL = "http://localhost:3000/EmployeePayrollDB/";
         makeServiceCall("POST", postURL, true, EmployeeData)
             .then(responseText => {
                 postElement.textContent = "Post User Data :" + responseText;

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
         try {
-            (new EmployeePayroll()).name = name.value;            
+            checkName(name.value);          
             setTextValue('.text-error', "");
         } catch (e) {
             setTextValue('.text-error', e);
@@ -18,13 +18,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
      //Event Listener for Date (UC-19)
      const date = document.querySelector('#date');
      date.addEventListener('input', function() {
-         try {
              let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
-             (new EmployeePayroll()).startDate = new Date(Date.parse(date));
-             setTextValue('.date-error', "");
-         } catch (e) {
-             setTextValue('.date-error', e);
-         }
+             try {            
+                checkStartDate(new Date(Date.parse(date)));
+                setTextValue('.date-error', "");
+            } catch (e) {
+                setTextValue('.date-error', e);
+            }
      });
      
     const salary = document.querySelector('#salary');
@@ -45,7 +45,7 @@ const save = (event) => {
             createAndUpdateStorage();
             resetForm();
             //window.location.replace(siteProperties.home_Page);
-            window.location.replace(Site_Properties.home_page);
+            window.location.href = "../pages/HomePage.html";
         } else {
             createOrUpdateEmployeePayroll();
         }
@@ -64,7 +64,7 @@ const createOrUpdateEmployeePayroll = () => {
     makeServiceCall(methodCall, postURL, true, employeePayrollObj)
         .then(responseText =>{
             resetForm();
-            window.location.replace(Site_Properties.home_page);
+            window.location.href = "../pages/HomePage.html";
         })
         .catch(error => {
             throw error;
